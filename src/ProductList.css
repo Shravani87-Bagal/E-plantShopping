@@ -1,0 +1,244 @@
+/* ========================================
+   PARADISE NURSERY — PRODUCT LIST
+======================================== */
+
+.product-list-section {
+    min-height: 70vh;
+    padding: 65px 6%;
+    background: var(--cream);
+  }
+  
+  /* Collection heading */
+  
+  .product-list-header {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+  }
+  
+  .product-list-header .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  
+  .product-list-header h1,
+  .product-list-header h2 {
+    margin: 0 0 18px;
+    font-size: clamp(2.3rem, 5vw, 3.7rem);
+    line-height: 1.2;
+  }
+  
+  .product-list-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+  
+  /* Category headings and groups */
+  
+  .plant-category {
+    margin: 0 auto 55px;
+    max-width: 1400px;
+  }
+  
+  .plant-category h2,
+  .category-title {
+    margin: 0 0 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+  }
+  
+  .plant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+  
+  /* Individual plant cards */
+  
+  .plant-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 0 4px 18px rgba(37, 61, 42, 0.045);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  
+  .plant-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+  }
+  
+  .plant-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: var(--light-sage);
+    transition: transform 0.4s ease;
+  }
+  
+  .plant-card:hover img {
+    transform: scale(1.025);
+  }
+  
+  /* Plant information */
+  
+  .plant-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+  
+  .plant-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+    line-height: 1.35;
+  }
+  
+  .plant-category-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    background: var(--light-sage);
+    color: var(--forest);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+  
+  .plant-card p {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  
+  .plant-price {
+    margin-top: auto;
+    margin-bottom: 18px;
+    color: var(--forest);
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+  
+  /* Add to Cart button */
+  
+  .add-to-cart-button {
+    width: 100%;
+    margin-top: auto;
+    padding: 13px 18px;
+    border: 2px solid var(--forest);
+    border-radius: 5px;
+    background: var(--forest);
+    color: var(--white);
+    font-weight: 700;
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease;
+  }
+  
+  .add-to-cart-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    border-color: var(--terracotta);
+    background: var(--terracotta);
+  }
+  
+  .add-to-cart-button:disabled {
+    border-color: #dce5d7;
+    background: #e7eee3;
+    color: var(--forest);
+    cursor: not-allowed;
+    opacity: 1;
+  }
+  
+  /* Continue shopping and general product actions */
+  
+  .product-list-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+  }
+  
+  .secondary-button {
+    padding: 13px 24px;
+    border: 1px solid var(--forest);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--forest);
+    font-weight: 700;
+    transition: all 0.2s ease;
+  }
+  
+  .secondary-button:hover {
+    background: var(--forest);
+    color: var(--white);
+  }
+  
+  /* Empty or informational messages */
+  
+  .product-message {
+    padding: 35px 20px;
+    border-radius: 8px;
+    background: var(--light-sage);
+    color: var(--deep-forest);
+    text-align: center;
+  }
+  
+  /* ========================================
+     RESPONSIVE DESIGN
+  ======================================== */
+  
+  @media (max-width: 1000px) {
+    .plant-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+  
+    .plant-card img {
+      height: 230px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .product-list-section {
+      padding: 45px 5%;
+    }
+  
+    .product-list-header {
+      margin-bottom: 32px;
+    }
+  
+    .plant-category {
+      margin-bottom: 40px;
+    }
+  
+    .plant-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+  
+    .plant-card img {
+      height: 260px;
+    }
+  
+    .plant-card-content {
+      padding: 20px;
+    }
+  
+    .plant-category h2,
+    .category-title {
+      font-size: 1.7rem;
+    }
+  }

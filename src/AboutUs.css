@@ -1,0 +1,105 @@
+/* ========================================
+   PARADISE NURSERY — ABOUT US
+======================================== */
+
+.about-section {
+    padding: 90px 8%;
+    background: var(--cream);
+  }
+  
+  .about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .section-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--terracotta);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  .about-section h2 {
+    max-width: 800px;
+    margin: 0 0 24px;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    line-height: 1.2;
+  }
+  
+  .about-section p {
+    max-width: 850px;
+    margin: 0 0 20px;
+    color: #606b60;
+    font-size: 1.02rem;
+    line-height: 1.9;
+  }
+  
+  /* About Us feature cards */
+  
+  .about-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 45px;
+  }
+  
+  .about-feature-card {
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 5px 20px rgba(37, 61, 42, 0.04);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  
+  .about-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+  
+  .about-feature-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.35rem;
+  }
+  
+  .about-feature-card p {
+    margin: 0;
+    font-size: 0.94rem;
+  }
+  
+  /* About Us responsive layout */
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 65px 6%;
+    }
+  
+    .about-features {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-top: 32px;
+    }
+  
+    .about-feature-card {
+      padding: 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-section {
+      padding: 50px 5%;
+    }
+  
+    .about-section h2 {
+      font-size: 2rem;
+    }
+  
+    .about-section p {
+      font-size: 0.96rem;
+    }
+  }

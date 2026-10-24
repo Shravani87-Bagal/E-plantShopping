@@ -1,0 +1,312 @@
+/* ========================================
+   PARADISE NURSERY — SHOPPING CART
+======================================== */
+
+.cart-section {
+    min-height: 70vh;
+    padding: 65px 6%;
+    background: var(--cream);
+  }
+  
+  .cart-header {
+    max-width: 1200px;
+    margin: 0 auto 35px;
+  }
+  
+  .cart-header h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+  }
+  
+  .cart-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+  
+  /* Main cart layout */
+  
+  .cart-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  /* Individual cart item */
+  
+  .cart-item {
+    display: grid;
+    grid-template-columns: 135px minmax(0, 1fr);
+    gap: 22px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: 0 4px 15px rgba(37, 61, 42, 0.04);
+  }
+  
+  .cart-item img {
+    width: 135px;
+    height: 145px;
+    border-radius: 7px;
+    object-fit: cover;
+    background: var(--light-sage);
+  }
+  
+  .cart-item-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cart-item-details h3 {
+    margin: 0 0 7px;
+    font-size: 1.35rem;
+  }
+  
+  .cart-item-details p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  .cart-item-price {
+    margin-bottom: 12px;
+    color: var(--forest);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  
+  /* Quantity controls */
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 8px 0 14px;
+  }
+  
+  .quantity-controls button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--light-sage);
+    color: var(--deep-forest);
+    font-size: 1.15rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+  }
+  
+  .quantity-controls button:hover {
+    border-color: var(--forest);
+    background: var(--forest);
+    color: var(--white);
+  }
+  
+  .quantity-controls span {
+    min-width: 22px;
+    color: var(--deep-forest);
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* Remove item button */
+  
+  .remove-item-button {
+    padding: 7px 0;
+    border: none;
+    background: transparent;
+    color: #b55343;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: color 0.2s ease;
+  }
+  
+  .remove-item-button:hover {
+    color: #803629;
+    text-decoration: underline;
+  }
+  
+  /* Cart summary panel */
+  
+  .cart-summary {
+    position: sticky;
+    top: 20px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+  
+  .cart-summary h2 {
+    margin: 0 0 25px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.65rem;
+  }
+  
+  .cart-summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 17px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  
+  .cart-summary-row strong {
+    color: var(--deep-forest);
+  }
+  
+  .cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 24px 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--deep-forest);
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  
+  .cart-total strong {
+    color: var(--forest);
+    font-size: 1.5rem;
+  }
+  
+  .cart-summary .primary-button {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .cart-summary .secondary-button {
+    width: 100%;
+  }
+  
+  /* Continue shopping and cart actions */
+  
+  .cart-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+  }
+  
+  /* Empty cart state */
+  
+  .empty-cart {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 60px 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(37, 61, 42, 0.04);
+  }
+  
+  .empty-cart h2 {
+    margin: 0 0 15px;
+    font-size: 2rem;
+  }
+  
+  .empty-cart p {
+    margin: 0 auto 25px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  
+  .empty-cart .primary-button {
+    margin-top: 5px;
+  }
+  
+  /* ========================================
+     RESPONSIVE DESIGN
+  ======================================== */
+  
+  @media (max-width: 900px) {
+    .cart-container {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  
+    .cart-summary {
+      position: static;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .cart-section {
+      padding: 45px 5%;
+    }
+  
+    .cart-item {
+      grid-template-columns: 95px minmax(0, 1fr);
+      gap: 14px;
+      padding: 14px;
+    }
+  
+    .cart-item img {
+      width: 95px;
+      height: 115px;
+    }
+  
+    .cart-item-details h3 {
+      font-size: 1.1rem;
+    }
+  
+    .cart-item-price {
+      font-size: 1rem;
+    }
+  
+    .quantity-controls {
+      gap: 9px;
+    }
+  
+    .cart-summary {
+      padding: 22px;
+    }
+  
+    .cart-actions {
+      flex-direction: column;
+    }
+  
+    .cart-actions button {
+      width: 100%;
+    }
+  
+    .empty-cart {
+      padding: 45px 20px;
+    }
+  
+    .empty-cart h2 {
+      font-size: 1.7rem;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .cart-item {
+      grid-template-columns: 1fr;
+    }
+  
+    .cart-item img {
+      width: 100%;
+      height: 190px;
+    }
+  }
